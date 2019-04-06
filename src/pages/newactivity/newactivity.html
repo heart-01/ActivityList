@@ -6,10 +6,24 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title>newactivity</ion-title>
+    <ion-title>เพิ่มกิจกรรม</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+  <form>
+    <h5>กรอกรายละเอียดกิจกรรม</h5>
+    <ion-list>
 
+      <ion-item>
+        <ion-input type="text" name="title" [(ngModel)]="title" placeholder="ชื่อกิจกรรม" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input type="text" name="description" [(ngModel)]="description" placeholder="รายละเอียดกิจกรรม" required></ion-input>
+      </ion-item>  
+
+    </ion-list>
+    <button ion-button block (click)="saveRecords()">บันทึก</button>
+  </form>
 </ion-content>
