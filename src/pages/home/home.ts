@@ -18,7 +18,7 @@ export class HomePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public storage:Storage) {
 
-    this.storage.get('todoDetails').then(
+    this.storage.get('todoDetails').then( //todoDetails เป็นคีย์
       (val)=>{
         this.addedToDoList=val;
       }
@@ -51,9 +51,9 @@ export class HomePage {
 
   //ดึงข้อมูลจาก Local Storage เมื่อกรอกข้อมูลครบถ้วน
   ionViewDidEnter(){
-    this.storage.get('todoDetails').then(
+    this.storage.get('todoDetails').then( 
       (val)=>{
-        this.addedToDoList=val;
+        this.addedToDoList=val; 
       }
     );
   }
